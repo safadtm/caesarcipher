@@ -24,10 +24,10 @@
         </p>
         <div class="buttons">
             <div style="margin: 5px;">
-            <button id="encodeBt" >Encode</button>
+                <button id="encodeBt">Encode</button>
             </div>
             <div style="margin: 5px;">
-            <button id="decodeBt">Decode</button>
+                <button id="decodeBt">Decode</button>
             </div>
         </div>
         <p>
@@ -51,13 +51,13 @@
     </div>
 
     <script>
-        
-    function copyText() {
-        const outputText = document.getElementById('outputText');
-        outputText.select();
-        document.execCommand('copy');
 
-    }
+        function copyText() {
+            const outputText = document.getElementById('outputText');
+            outputText.focus();
+            outputText.select();
+            document.execCommand('copy');
+        }
     </script>
 </body>
 

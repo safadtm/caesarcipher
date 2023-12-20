@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const resultText = document.getElementById('outputText');
 
 
-        for (const letter of textarea.value) {
+        for (let letter of textarea.value) {
+            letter=letter.toLowerCase();
             if (!listLetters.includes(letter)) {
                 continue;
             }
@@ -22,6 +23,32 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (newIndexLetter > 25) {
                 newIndexLetter -= 26;
+            }
+
+            output += listLetters[newIndexLetter];
+            resultText.value = output;
+        }
+
+        output = '';
+    })
+
+
+    decodebtn.addEventListener('click', () => {
+        const textarea = document.getElementById('inputText');
+        const resultText = document.getElementById('outputText');
+
+
+        for (let letter of textarea.value) {
+            letter=letter.toLowerCase();
+            if (!listLetters.includes(letter)) {
+                continue;
+            }
+
+            const indexLetter = listLetters.findIndex((item) => item === letter);
+            let newIndexLetter = indexLetter - key;
+
+            if (newIndexLetter < 0) {
+                newIndexLetter += 26;
             }
 
             output += listLetters[newIndexLetter];
