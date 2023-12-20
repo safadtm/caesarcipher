@@ -24,10 +24,10 @@
         </p>
         <div class="buttons">
             <div style="margin: 5px;">
-            <button id="encodeBt" onclick="encode()">Encode</button>
+            <button id="encodeBt" >Encode</button>
             </div>
             <div style="margin: 5px;">
-            <button id="decodeBt" onclick="decode()">Decode</button>
+            <button id="decodeBt">Decode</button>
             </div>
         </div>
         <p>
@@ -49,6 +49,17 @@
             In this sense, the cipher algorithm is the exchange of letters and the key is the number 3.
         </p>
     </div>
+
+    <script>
+        
+    function copyText() {
+        const outputText = document.getElementById('outputText');
+        outputText.select();
+        document.execCommand('copy');
+
+    }
+    </script>
 </body>
+
 
 </html>
