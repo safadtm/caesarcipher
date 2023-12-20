@@ -90,19 +90,33 @@ button {
 }
 
 
-@media (max-width: 768px) {
-    .buttons {
-        flex-direction: column;
-    }
-}
-
-
 
 button#decodeBt {
     background-color: red;
 }
 
 .buttons #encodeBt:hover,
-.buttons #decodeBt:hover {
+.buttons #encodeBt:active,
+.buttons #decodeBt:hover,
+.buttons #decodeBt:active {
     background-color: gray;
 }
+
+
+@media (max-width: 768px) {
+    body {
+        max-width: calc(100vw - 100px);
+        padding: 2% 20px;
+        font-size: 1.4rem;
+    }
+    button{
+        font-size: 16px;
+        font-weight: 500px;
+        padding: 11px 30px;
+
+    }
+    .buttons {
+        flex-direction: column;
+    }
+}
+
